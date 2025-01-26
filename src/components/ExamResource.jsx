@@ -25,7 +25,7 @@ function ExamResource() {
                     width="60%"
                     height="600px"
                 ></iframe>
-                <iframe
+                {/* <iframe
                     src="https://docs.google.com/forms/d/e/1FAIpQLSd5BkQXf6M8BA17aeTmgXgz_aMlXmRf0zMFfIGFBn5NJ_9QLg/viewform?embedded=true"
                     width="40%"
                     height="600px"
@@ -34,7 +34,7 @@ function ExamResource() {
                     marginwidth="0"
                 >
                     Đang tải…
-                </iframe>
+                </iframe> */}
             </div>
             <h4 className="text-xl font-500 mb-md">Đáp án tham khảo</h4>
             <ul className="list-disc list-inside mb-xl tracking-wide">
@@ -64,7 +64,7 @@ function ExamResource() {
                     <span>Ghi chú</span>
                 </button>
             </h4>
-            <Note>
+            <Note type="warning">
                 Tip! You can get ISO 8601 datetime by running new
                 Date().toISOString() in the console. Make sure you remove quotes
                 though.
