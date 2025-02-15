@@ -6,7 +6,9 @@ import namify from "../utils/namify";
 function PracticeList() {
     return (
         <div className="py-lg">
-            <h2 className="font-500 text-2xl mb-xxl mt-md ml-60">Practice Exams</h2>
+            <h2 className="font-500 text-2xl mb-xxl mt-md ml-60">
+                Practice Exams
+            </h2>
             {exams.map((exam) => {
                 if (exam.files.length === 0) return <div key={""}></div>;
                 return (
@@ -25,7 +27,7 @@ function PracticeList() {
                                         <div className="py-xs px-lg flex items-center gap-xxl ml-[-1.5px] hover:border-l-[3px] hover:border-text">
                                             <span>{title}</span>
                                             <span>90 / 120 câu</span>
-                                            <span class="material-symbols-rounded">
+                                            <span className="material-symbols-rounded">
                                                 favorite
                                             </span>
                                         </div>

@@ -9,10 +9,6 @@ function Header() {
     const location = useLocation();
     const navItems = [
         {
-            pathname: "/practice",
-            name: "Practice",
-        },
-        {
             pathname: "/timer",
             name: "Timer",
         },
