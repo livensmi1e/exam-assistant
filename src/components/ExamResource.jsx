@@ -4,6 +4,7 @@ import { useParams } from "react-router";
 import namify from "../utils/namify";
 import ConfettiButton from "./ConfettiButton";
 import apiCall, { POST } from "../api";
+import solutions from "../data/solution";
 
 function ExamResource() {
     const params = useParams();
@@ -18,7 +19,6 @@ function ExamResource() {
 
     useEffect(() => {
         fetchNotes();
-        console.log(notes);
     }, []);
 
     const fetchNotes = async () => {
@@ -74,21 +74,13 @@ function ExamResource() {
             </div>
             <h4 className="text-xl font-500 mb-md">Đáp án tham khảo</h4>
             <ul className="list-disc list-inside mb-xl tracking-wide">
-                <li className="my-xxs">
-                    <a href="https://youtube.com" target="_blank">
-                        https://youtube.com
-                    </a>
-                </li>
-                <li className="my-xxs">
-                    <a href="https://youtube.com" target="_blank">
-                        https://youtube.com
-                    </a>
-                </li>
-                <li className="my-xxs">
-                    <a href="https://youtube.com" target="_blank">
-                        https://youtube.com
-                    </a>
-                </li>
+                {solutions[file].map((solLink, index) => (
+                    <li className="my-xxs" key={index}>
+                        <a href={`${solLink}`} target="_blank">
+                            {solLink}
+                        </a>
+                    </li>
+                ))}
             </ul>
             <h4 className="text-xl font-500 mb-md flex justify-between items-center">
                 <span>Ghi chú</span>
