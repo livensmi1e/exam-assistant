@@ -1,11 +1,12 @@
 {
-    "name": "server",
+    "name": "exam-assistant-server",
     "version": "1.0.0",
     "main": "index.js",
     "license": "MIT",
     "author": "qbao <dangquocbao9504@gmail.com>",
     "scripts": {
-        "dev": "node --watch --env-file=.env index.js"
+        "dev": "node --watch --env-file=.env index.js",
+        "start": "node index.js"
     },
     "type": "commonjs",
     "dependencies": {

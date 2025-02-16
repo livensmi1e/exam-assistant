@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express.Router();
 const { createNote, getNotes } = require("../db.js");
-const { data } = require("react-router");
 
 router.post("/", (req, res) => {
     const { title, content } = req.body;
