@@ -6,8 +6,8 @@ const PORT = 3000;
 
 app.use(express.json());
 app.use(cors());
-app.use("/note", note);
-app.use("/exam", exam);
+app.use("/api/note", note);
+app.use("/api/exam", exam);
 
 app.listen(PORT, () => {
     console.log(`Example app listening on port ${PORT}`);
