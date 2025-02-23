@@ -2,8 +2,7 @@ const GET = "GET";
 const POST = "POST";
 
 async function apiCall(uri, method = GET, body = null, headers = {}) {
-    const BASE_URI =
-        import.meta.env.VITE_BASE_URI || "http://localhost:3000/api";
+    const BASE_URI = import.meta.env.VITE_BASE_URI || "https://ngoc.fun/api";
     console.log(BASE_URI);
     body = body ? JSON.stringify(body) : null;
 

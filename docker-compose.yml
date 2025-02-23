@@ -5,8 +5,13 @@ services:
             - "80:80"
         depends_on:
             - server
+        networks:
+            - exam-net
 
     server:
         build: ./server/
-        ports:
-            - "3000:3000"
+        networks:
+            - exam-net
+
+networks:
+    exam-net:
